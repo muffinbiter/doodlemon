@@ -1,60 +1,91 @@
-AIDOL ✦ K-POP Agency
+🎨 DOODLEMON
 
-AI Idol Training Simulation Game — Demo / PoC
+Your drawings become monsters!
+An AI-powered drawing & monster battle game
 
-<img width="869" height="287" alt="logo_aidol png" src="https://github.com/user-attachments/assets/2c533c40-e5e4-4c9f-a48b-d493d11b5dad" />
+🕹️ About
+DOODLEMON is a 2D pixel art exploration + turn-based battle game where the monsters you fight are born from your own drawings.
+Forget random loot drops — here, your drawing IS the monster.
+The AI analyzes your sketch's colors, shape, and detail to generate a completely unique Doodlemon every time. Even the same drawing can produce different results depending on how you color it.
 
-🎮 Play Now
-👉 https://muffinbiter.github.io/aidol/
+✨ Features
+🎨 Doodling System
 
-📖 Overview
-Step into the role of a head producer at a newly founded K-POP agency. Discover trainees, shape their personas, manage their weekly schedules, and lead them all the way to debut.
-AIDOL combines strategic stat management with emotional AI-driven member interactions — think Princess Maker meets K-POP visual novel.
+Draw freely on the canvas
+AI analyzes color, shape, and density to determine type, stats, and name
+Red → 🔥 Fire / Blue → 💧 Water / Green → 🌿 Grass / Yellow → ⚡ Electric
 
-✨ Demo Features
-FeatureDescription🎴 Title ScreenAnimated logo with stage background🏢 Group SetupSet group name, member count, and concept🃏 CastingFlip cards to reveal trainees, select 3 members💫 Persona SetupCustomize each member's name, position, and personality🏠 Main HubOffice HQ with member stat cards⚡ AP System12 AP per week — spend wisely across schedules📅 ScheduleAssign weekly training to each member🎬 Practice SceneAnimated result scene with Princess Maker-style narrative💬 Member ChatTalk to members with preset persona-based replies📊 Weekly ReportRadar chart + fandom gauge after each week💌 Member MessageA random member reaches out after the week ends🎲 Random EventWeek 1 triggers the Center Position Conflict event
+📖 Doodle Book Tier System
+TierCostAnalysisOld Doodle Book5 coinsShape only → Basic statsMagic Doodle Book15 coinsShape + Color → Elemental damage addedLegendary Doodle Book30 coinsFull analysis → Special ability granted
+🗺️ Stage Exploration
 
-🗂️ File Structure
-aidol/
-├── index.html                  # Main game file
-├── logo_aidol.png
-├── bg_title.png
-├── bg_office.png
-├── card_hana.png
-├── card_luna.png
-├── card_sei.png
-├── scene_hana_talk.png
-├── scene_luna_talk.png
-├── scene_sei_talk.png
-├── scene_hana_practice.png
-├── scene_luna_practice.png
-├── scene_sei_practice.png
-└── event_center_conflict.png
+3 stages: 🌿 Green Forest → 🌋 Volcanic Zone → ❄️ Frozen Tundra
+Mario-style side-scrolling pixel art backgrounds
+Hit the 🟡 Question Block to pop out coins!
+Defeat 2 regular mobs per stage → Boss appears
 
-🎨 Design
+⚔️ Battle System
 
-Aesthetic — Dark navy & gold, tarot card meets visual novel
-Font — Cormorant Garamond (display) + Noto Serif KR (dialogue)
-Reference — Oshi no Ko anime art style
-Platform — Mobile-first, 390×844px (iPhone portrait)
+Pokémon-style 1v1 turn-based battles
+Type effectiveness applies (Fire→Grass / Water→Fire / Grass→Water / Electric→Water)
+Choose between your freshly drawn Doodlemon or a previously captured one
 
 
-🧩 Tech Stack
+🎮 Controls
+⌨️ Keyboard
+KeyAction← →Move↑ / SpaceJumpZBattle Skill 1XBattle Skill 2
+📱 Mobile
+On-screen D-pad buttons (multi-touch supported)
 
-Vanilla HTML / CSS / JavaScript — single file, zero dependencies
-Hosted via GitHub Pages
+🚀 Getting Started
+bash# Clone the repository
+git clone https://github.com/muffinbiter/doodlemon.git
+
+# Navigate to the folder
+cd doodlemon
+
+# Open in your browser
+open doodlemon.html
+
+No installation required — runs as a single HTML file.
+The NeoDGM font is embedded directly in the file, so it works completely offline.
 
 
-🗺️ Roadmap
+📁 File Structure
+doodlemon/
+├── doodlemon.html   # Entire game (font embedded, single file)
+└── README.md
 
- Real-time Claude API integration for member dialogue
- AI image generation from persona input
- 52-week training + debut system
- Multi-ending based on stats, fandom & choices
- Additional members, events, and spaces
- Mini character animations
- In-game coin system
+🗺️ Game Flow
+Title Screen
+  ↓
+Explore (side-scroll, collect coins)
+  ↓
+Wild Doodlemon appears!
+  ↓
+Choose: [Draw a new Doodlemon] or [Battle with existing one]
+  ↓
+Select Doodle Book → Draw → AI Analysis → Doodlemon born!
+  ↓
+1v1 Turn-Based Battle
+  ↓
+Defeat 2 mobs → Boss Battle → Next Stage
+  ↓
+Stage 3 Boss (God of Ice) → GAME OVER 💀
+
+🛠️ Tech Stack
+
+HTML5 Canvas — Game rendering (pixel art)
+Vanilla JavaScript — All game logic
+AI Color Analysis — Canvas ImageData API for pixel-level analysis
+NeoDGM Font — Pixel font (OFL 1.1 License)
 
 
-📝 License
-Demo / Proof of Concept — All character assets and backgrounds are original AI-generated illustrations.
+📌 Background
+Built as a PoC (Proof of Concept) demo for the Smilegate AI Center Task Force.
+The core concept — drawing → AI interpretation → instant feedback loop — was designed to demonstrate how AI can transform user-generated content into meaningful game elements in real time.
+
+📄 License
+
+Game code: MIT License
+NeoDGM Font: OFL 1.1 © Eunbin Jeong
