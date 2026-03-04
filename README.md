@@ -3,6 +3,9 @@ AI Drawing Monster Battle Game
 
 Your drawings become monsters.
 
+🎮 Play Demo  
+https://muffinbiter.github.io/doodlemon/
+
 ---
 
 ## Overview
